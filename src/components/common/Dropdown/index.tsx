@@ -5,28 +5,18 @@ import { Fragment } from 'react';
 
 import type { ICommon } from '@/interfaces';
 
-interface IProps {
-  labelE?: React.ReactNode;
-  options?: ICommon.IOption[];
-  classOption?: string;
-  classActiveOption?: string;
-  onChange: (ot: ICommon.IOption) => void;
-  selected?: ICommon.IOption;
-  classList?: string;
-}
-
 export default function Dropdown({
-  labelE = 'Options',
+  labelE = 'Select',
   options = [
     { id: 0, label: 'option 1', value: 'value 1' },
     { id: 1, label: 'option 2', value: 'value 2' },
   ],
   classOption,
-  classActiveOption = 'text-red-500',
+  classActiveOption,
   classList,
   onChange,
   selected,
-}: IProps) {
+}: ICommon.IDropdownProps) {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <Menu.Button>

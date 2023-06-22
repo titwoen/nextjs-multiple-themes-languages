@@ -17,4 +17,13 @@ export declare namespace ICommon {
     label: string;
     value: string;
   };
+  type IDropdownProps = {
+    labelE?: React.ReactNode;
+    options?: IOption[];
+    classOption?: string;
+    classActiveOption?: string;
+    onChange: (ot: IOption) => void;
+    selected?: IOption;
+    classList?: string;
+  };
 }

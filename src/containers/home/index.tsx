@@ -3,10 +3,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { Dropdown } from '@/components/common';
-import { designSystem } from '@/configs';
 import type { ICommon } from '@/interfaces';
 import type { Types } from '@/types';
 
@@ -26,10 +25,6 @@ export default function HomeContainer() {
     { id: 2, label: '2', value: '2' },
   ];
   const [selected, setSelected] = useState(options[0]);
-
-  useEffect(() => {
-    console.log(designSystem.designSystemTW);
-  }, []);
 
   return (
     <div>
