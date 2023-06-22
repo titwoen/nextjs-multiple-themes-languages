@@ -33,10 +33,7 @@ export default function Dropdown({
         {String(labelE) ? (
           <div className="flex items-center gap-3">
             {labelE}
-            <ChevronDownIcon
-              className="-mr-1 h-5 w-5 text-gray-400"
-              aria-hidden="true"
-            />
+            <ChevronDownIcon className="-mr-1 h-5 w-5" aria-hidden="true" />
           </div>
         ) : (
           labelE

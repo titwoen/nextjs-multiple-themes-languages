@@ -3,11 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 
-import { Dropdown } from '@/components/common';
-import { designSystem } from '@/configs';
-import type { ICommon } from '@/interfaces';
 import type { Types } from '@/types';
 
 // interface IProps {}
@@ -21,31 +17,12 @@ export default function HomeContainer() {
 
   const changeTo: Types.ILanguage =
     router.locale === router.defaultLocale ? 'en' : 'vi';
-  const options: ICommon.IOption[] = [
-    { id: 1, label: '1', value: '1' },
-    { id: 2, label: '2', value: '2' },
-  ];
-  const [selected, setSelected] = useState(options[0]);
-
-  useEffect(() => {
-    console.log(designSystem.designSystemTW);
-  }, []);
 
   return (
     <div>
       <Link href="/" locale={changeTo}>
         {t('changeLocale', { changeTo })}
       </Link>
-
-      <Dropdown
-        options={options}
-        selected={selected}
-        onChange={(option) => setSelected(option)}
-        labelE="Select option"
-        classList="left-0"
-        classOption=""
-        classActiveOption=""
-      />
 
       <div className="flex gap-3">
         <MoonIcon
