@@ -2,14 +2,15 @@ import type { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import HomeContainer from '@/containers/home';
+import { LayoutDefault } from '@/layouts';
 import { Meta } from '@/layouts/Meta';
 
 const Index = () => {
   return (
-    <>
+    <LayoutDefault>
       <Meta />
       <HomeContainer />
-    </>
+    </LayoutDefault>
   );
 };
 
