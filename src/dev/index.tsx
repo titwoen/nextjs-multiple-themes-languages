@@ -33,13 +33,13 @@ export default function Dev() {
         }
       >
         <div className="m-6 rounded-3xl bg-colors-titwo-2 shadow-2xl backdrop-blur-2xl md:m-10 lg:m-20">
-          <div className="flex items-center justify-end gap-10 p-10 pb-0">
+          <div className="sticky top-0 z-10 flex items-center justify-end gap-10 p-10 pb-0">
             <SwitchLanguages />
             <SwitchTheme />
           </div>
           <div className="relative h-full w-full">
-            <div className="flex">
-              <div className="sticky top-10 h-screen p-10">
+            <div className="md:flex">
+              <div className="top-10 p-10 md:sticky md:h-screen">
                 {COMPONENTS.map((component) => (
                   <div
                     className={clsx(
@@ -58,7 +58,7 @@ export default function Dev() {
                 <div className="flex w-full justify-center p-10">
                   <div className="flex w-full flex-col gap-5">
                     <h1 className="uppercase">{currentComponent.name}</h1>
-                    <div className="relative border p-20">
+                    <div className="relative border p-4 md:p-20">
                       {currentComponent?.data.ui}
                     </div>
                     {currentComponent.data.renderSource && (

@@ -14,6 +14,7 @@ const designSystemDev = {
           { key: '4', hex: '#00000024' },
           { key: '5', hex: '#0000008A' },
           { key: '6', hex: '#C1D6FF' },
+          { key: '7', hex: '#FFFFFF24' },
         ],
       },
     ],
