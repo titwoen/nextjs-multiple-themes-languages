@@ -11,8 +11,19 @@ class MyDocument extends Document<Props> {
       this.props.__NEXT_DATA__.locale ?? this.props.__NEXT_DATA__.defaultLocale;
     return (
       <Html lang={currentLocale} data-theme={theme}>
-        <Head />
-        <body>
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
+        <body className="bg-[url('/bg1.JPG')] bg-fixed font-Quicksand">
           <Main />
           <NextScript />
         </body>

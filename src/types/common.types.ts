@@ -1,5 +1,5 @@
 export declare namespace Types {
-  type ITheme = 'light' | 'dark' | 'oled';
+  type ITheme = 'light' | 'dark';
   type ILanguage = 'vi' | 'en';
 }
 

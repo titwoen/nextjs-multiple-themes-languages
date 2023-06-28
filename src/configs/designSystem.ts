@@ -5,10 +5,15 @@ const designSystemDev = {
     colors: [
       {
         id: mId(),
-        key: 'base',
+        key: 'titwo',
         info: [
-          { key: 'white', hex: '#FFFFFF' },
-          { key: 'black', hex: '#000000' },
+          { key: '0', hex: '#FFFFFF' },
+          { key: '1', hex: '#0000001A' },
+          { key: '2', hex: '#FFFFFF0A' },
+          { key: '3', hex: '#FFFFFF33' },
+          { key: '4', hex: '#00000024' },
+          { key: '5', hex: '#0000008A' },
+          { key: '6', hex: '#C1D6FF' },
         ],
       },
     ],

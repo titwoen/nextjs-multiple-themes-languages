@@ -1,39 +1,20 @@
-import { MoonIcon, SunIcon } from '@heroicons/react/20/solid';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
-import { useTheme } from 'next-themes';
-
-import type { Types } from '@/types';
+// import { useTranslation } from 'next-i18next';
 
 // interface IProps {}
 
 export default function HomeContainer() {
-  const { t } = useTranslation('common');
-  const router = useRouter();
-  const { setTheme } = useTheme();
-
-  const changeTheme: (theme: Types.ITheme) => void = setTheme;
-
-  const changeTo: Types.ILanguage =
-    router.locale === router.defaultLocale ? 'en' : 'vi';
+  // const { t } = useTranslation('common');
 
   return (
     <div>
-      <Link href="/" locale={changeTo}>
-        {t('changeLocale', { changeTo })}
-      </Link>
-
-      <div className="flex gap-3">
-        <MoonIcon
-          className="h-10 w-10 cursor-pointer"
-          onClick={() => changeTheme('dark')}
+      {/* <ImgWithLoader.Wrap className="h-screen w-screen">
+        <ImgWithLoader.Img
+          src="https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+          loaderJsx={<Loader.Sketeton />}
+          className="object-cover"
         />
-        <SunIcon
-          className="h-10 w-10 cursor-pointer"
-          onClick={() => changeTheme('light')}
-        />
-      </div>
+      </ImgWithLoader.Wrap> */}
     </div>
   );
 }

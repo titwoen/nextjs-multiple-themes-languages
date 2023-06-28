@@ -6,7 +6,19 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const { i18n } = require('./next-i18next.config');
 
-const nextConfig = { i18n };
+const nextConfig = {
+  i18n,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        port: '',
+        pathname: '/photos/**',
+      },
+    ],
+  },
+};
 
 const plugins = [
   withBundleAnalyzer({

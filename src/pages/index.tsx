@@ -7,7 +7,7 @@ import { Meta } from '@/layouts/Meta';
 
 const Index = () => {
   return (
-    <LayoutDefault>
+    <LayoutDefault className="h-full w-full">
       <Meta />
       <HomeContainer />
     </LayoutDefault>

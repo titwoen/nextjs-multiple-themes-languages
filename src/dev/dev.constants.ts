@@ -1,4 +1,4 @@
-import { dropdown } from './components';
+import { cardProfile, dropdown } from './components';
 
 export interface IComponent {
   name: string;
@@ -13,5 +13,9 @@ export const COMPONENTS: IComponent[] = [
   {
     name: 'dropdown',
     data: dropdown,
+  },
+  {
+    name: 'cardProfile',
+    data: cardProfile,
   },
 ];
